@@ -4,6 +4,7 @@ set -euo pipefail
 ROOT=$(git rev-parse --show-toplevel )
 
 # install frontend packages
+cd "frontend"
 echo "Installing nvm"
 if ! command -v nvm >/dev/null 2>&1; then
   curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
@@ -21,9 +22,14 @@ nvm use 22
 echo "Installing react-router-dom"
 npm install react-router-dom
 
+echo "Installing react-router"
+npm install react-router-dom
+
 echo "Installing tailwind"
 npm install -D tailwindcss postcss autoprefixer
 
+npm install
+cd "$ROOT"
 
 # install backend packages
 echo "Checking for Python venv"

@@ -7,5 +7,5 @@ def say_hello(request):
     return HttpResponse("Hello World")
 
 
-def home_page(request):
-    return JsonResponse({"message": "Hello from views"})
+# def home_page(request):
+#     return JsonResponse({"message": "Hello from views"})
