@@ -3,22 +3,14 @@ import { useState, useEffect } from "react";
 import React from "react";
 import ReactDOM from "react-dom";
 
-import HomePage from "./pages/HomePage.tsx";
+import HomePage from "./pages/HomePage";
 
 
 function App() {
 
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />}/>
-        <Route path="/home" element={<HomePage />}/>
-
-
-
-      </Routes>
-    </BrowserRouter>
+    <HomePage />
   );
 
 
