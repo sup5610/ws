@@ -11,6 +11,12 @@ npm install react-router-dom
 npm install
 npm install -D tailwindcss postcss autoprefixer
 
+cd "$ROOT"
+
 # install backend packages
+if [[ ! -d "./backend/.venv" ]]; then
+    python3 -m venv "./backend/.venv"
+fi
+
 source ./backend/.venv/bin/activate
 pip install -r ./backend/requirements.txt
